@@ -15,7 +15,7 @@ export class Navbar implements OnInit {
   ngOnInit() {
     const savedTheme = localStorage.getItem('theme') || 'light';
     if (savedTheme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
+      document.body.classList.add('dark-mode');
       this.isDarkMode = true;
     }
   }
@@ -28,10 +28,10 @@ export class Navbar implements OnInit {
   toggleTheme(event: any) {
     this.isDarkMode = event.target.checked;
     if (this.isDarkMode) {
-      document.documentElement.setAttribute('data-theme', 'dark');
+      document.body.classList.add('dark-mode');
       localStorage.setItem('theme', 'dark');
     } else {
-      document.documentElement.setAttribute('data-theme', 'light');
+      document.body.classList.remove('dark-mode');
       localStorage.setItem('theme', 'light');
     }
   }
