@@ -1,0 +1,93 @@
+
+> adso-3063267-angular@0.0.0 build
+> ng build
+
+[33m❯[39m Building...
+[32m✔[39m Building...
+[1mInitial chunk files[22m[2m | [22m[1mNames[22m        [2m | [22m [1mRaw size[22m[2m | [22m[1mEstimated transfer size[22m
+[32mmain-IIA745ME.js[39m   [2m | [22m[2mmain[22m         [2m | [22m[36m815.86 kB[39m[2m | [22m              [36m130.78 kB[39m
+[32mstyles-6AQKB4ZQ.css[39m[2m | [22m[2mstyles[22m       [2m | [22m [36m58 bytes[39m[2m | [22m               [36m58 bytes[39m
+
+[1m [22m                  [2m | [22m[1mInitial total[22m[2m | [22m[1m[93m815.92 kB[39m[22m[2m | [22m              [1m130.84 kB[22m
+
+Application bundle generation failed. [2.844 seconds] - 2026-04-07T21:06:11.134Z
+
+
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mbundle initial exceeded maximum budget. Budget 500.00 kB was not met by 315.92 kB with a total of 815.92 kB.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1msrc/app/component/panel-admin/panel-admin.scss exceeded maximum budget. Budget 4.00 kB was not met by 17.46 kB with a total of 21.46 kB.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1msrc/app/component/inicio/inicio.scss exceeded maximum budget. Budget 4.00 kB was not met by 17.19 kB with a total of 21.19 kB.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1msrc/app/component/perfil/perfil.scss exceeded maximum budget. Budget 4.00 kB was not met by 21.68 kB with a total of 25.68 kB.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1msrc/app/component/pasarela-pagos/pasarela-pagos.scss exceeded maximum budget. Budget 4.00 kB was not met by 7.38 kB with a total of 11.38 kB.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1msrc/app/component/calificacion/calificacion.scss exceeded maximum budget. Budget 4.00 kB was not met by 3.00 kB with a total of 7.00 kB.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1msrc/app/component/reporte/reporte.scss exceeded maximum budget. Budget 4.00 kB was not met by 3.73 kB with a total of 7.73 kB.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1msrc/app/component/servicios/servicios.scss exceeded maximum budget. Budget 4.00 kB was not met by 2.90 kB with a total of 6.90 kB.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mcss-inline-fonts:https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap exceeded maximum budget. Budget 4.00 kB was not met by 37.84 kB with a total of 41.84 kB.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1msrc/app/component/register/register.scss exceeded maximum budget. Budget 4.00 kB was not met by 221 bytes with a total of 4.22 kB.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1msrc/app/component/perfil-usuario/perfil-usuario.scss exceeded maximum budget. Budget 4.00 kB was not met by 21.68 kB with a total of 25.68 kB.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1msrc/app/component/sobre-nosotros/sobre-nosotros.scss exceeded maximum budget. Budget 4.00 kB was not met by 3.76 kB with a total of 7.76 kB.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1msrc/app/component/tienda/tienda.scss exceeded maximum budget. Budget 4.00 kB was not met by 18.93 kB with a total of 22.93 kB.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1msrc/app/component/adopcion/adopcion.scss exceeded maximum budget. Budget 4.00 kB was not met by 21.55 kB with a total of 25.55 kB.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1msrc/app/component/perfil-veterinario/perfil-veterinario.scss exceeded maximum budget. Budget 4.00 kB was not met by 38.25 kB with a total of 42.25 kB.[0m
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1msrc/app/component/veterinario/veterinario.scss exceeded maximum budget. Budget 4.00 kB was not met by 38.25 kB with a total of 42.25 kB.[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[41;97mERROR[41;31m][0m [1msrc/app/component/panel-admin/panel-admin.scss exceeded maximum budget. Budget 8.00 kB was not met by 13.46 kB with a total of 21.46 kB.[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1msrc/app/component/inicio/inicio.scss exceeded maximum budget. Budget 8.00 kB was not met by 13.19 kB with a total of 21.19 kB.[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1msrc/app/component/perfil/perfil.scss exceeded maximum budget. Budget 8.00 kB was not met by 17.68 kB with a total of 25.68 kB.[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1msrc/app/component/pasarela-pagos/pasarela-pagos.scss exceeded maximum budget. Budget 8.00 kB was not met by 3.38 kB with a total of 11.38 kB.[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mcss-inline-fonts:https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap exceeded maximum budget. Budget 8.00 kB was not met by 33.84 kB with a total of 41.84 kB.[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1msrc/app/component/perfil-usuario/perfil-usuario.scss exceeded maximum budget. Budget 8.00 kB was not met by 17.68 kB with a total of 25.68 kB.[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1msrc/app/component/tienda/tienda.scss exceeded maximum budget. Budget 8.00 kB was not met by 14.93 kB with a total of 22.93 kB.[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1msrc/app/component/adopcion/adopcion.scss exceeded maximum budget. Budget 8.00 kB was not met by 17.55 kB with a total of 25.55 kB.[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1msrc/app/component/perfil-veterinario/perfil-veterinario.scss exceeded maximum budget. Budget 8.00 kB was not met by 34.25 kB with a total of 42.25 kB.[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1msrc/app/component/veterinario/veterinario.scss exceeded maximum budget. Budget 8.00 kB was not met by 34.25 kB with a total of 42.25 kB.[0m
+
+[39m[22m

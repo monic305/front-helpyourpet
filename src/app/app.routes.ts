@@ -1,0 +1,39 @@
+import { Routes } from '@angular/router';
+import { Login } from './component/login/login';
+import { Register } from './component/register/register';
+import { Inicio } from './component/inicio/inicio';
+import { SobreNosotros } from './component/sobre-nosotros/sobre-nosotros';
+import { Adopcion } from './component/adopcion/adopcion';
+import { Tienda } from './component/tienda/tienda';
+import { Reporte } from './component/reporte/reporte';
+import { Calificacion } from './component/calificacion/calificacion';
+import { Veterinario } from './component/veterinario/veterinario';
+import { PerfilVeterinario } from './component/perfil-veterinario/perfil-veterinario';
+import { PerfilUsuario } from './component/perfil-usuario/perfil-usuario';
+import { Perfil } from './component/perfil/perfil';
+import { PanelAdmin } from './component/panel-admin/panel-admin';
+import { PasarelaPagos } from './component/pasarela-pagos/pasarela-pagos';
+import { Recovery } from './component/recovery/recovery';
+import { RecoveryContra } from './component/recovery-contra/recovery-contra';
+import { Servicios } from './component/servicios/servicios';
+
+export const routes: Routes = [
+  { path: '', component: Login },
+  { path: 'login', component: Login },
+  { path: 'register', component: Register },
+  { path: 'inicio', component: Inicio },
+  { path: 'sobre-nosotros', component: SobreNosotros },
+  { path: 'adopcion', component: Adopcion },
+  { path: 'tienda', component: Tienda },
+  { path: 'reporte', component: Reporte },
+  { path: 'calificacion', component: Calificacion },
+  { path: 'veterinario', component: Veterinario },
+  { path: 'perfil-veterinario', component: PerfilVeterinario },
+  { path: 'perfil-usuario', component: PerfilUsuario },
+  { path: 'perfil', component: Perfil },
+  { path: 'panel-admin', component: PanelAdmin },
+  { path: 'pasarela-pagos', component: PasarelaPagos },
+  { path: 'recovery', component: Recovery },
+  { path: 'recovery-contra', component: RecoveryContra },
+  { path: 'servicios', component: Servicios }
+];
