@@ -15,7 +15,21 @@ export class App {
   router = inject(Router);
   protected readonly title = signal('adso_3063267-angular');
 
-  get showLayout(): boolean {
-    return this.router.url !== '/' && this.router.url !== '/login' && this.router.url !== '/register';
+  /** Rutas donde NO se muestra el navbar global */
+  private readonly noNavbarRoutes = ['/', '/login', '/register', '/recovery', '/inicio', '/perfil-usuario'];
+
+  /** Rutas donde NO se muestra el footer global */
+  private readonly noFooterRoutes = ['/', '/login', '/register', '/recovery', '/perfil-usuario'];
+
+  get showNavbar(): boolean {
+    return !this.noNavbarRoutes.includes(this.router.url);
   }
-}
+
+  get showFooter(): boolean {
+    return !this.noFooterRoutes.includes(this.router.url);
+  }
+
+  get showLayout(): boolean {
+    return this.showNavbar;
+  }
+}

@@ -14,7 +14,6 @@ import { Perfil } from './component/perfil/perfil';
 import { PanelAdmin } from './component/panel-admin/panel-admin';
 import { PasarelaPagos } from './component/pasarela-pagos/pasarela-pagos';
 import { Recovery } from './component/recovery/recovery';
-import { RecoveryContra } from './component/recovery-contra/recovery-contra';
 import { Servicios } from './component/servicios/servicios';
 
 export const routes: Routes = [
@@ -34,6 +33,5 @@ export const routes: Routes = [
   { path: 'panel-admin', component: PanelAdmin },
   { path: 'pasarela-pagos', component: PasarelaPagos },
   { path: 'recovery', component: Recovery },
-  { path: 'recovery-contra', component: RecoveryContra },
   { path: 'servicios', component: Servicios }
 ];

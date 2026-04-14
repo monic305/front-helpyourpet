@@ -1,92 +1,11 @@
-body {
+:host {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 100vh;
-    margin: 0;
-
+    width: 100%;
     padding-right: 100px;
-}
-
-.password-recovery {
-    background-color: rgba(255, 255, 255, 0.459);
-    padding: 30px;
-    border-radius: 50px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    margin-right: 20px;
-}
-
-h2 {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 0;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.description {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
-    color: #555;
-    margin-bottom: 25px;
-    line-height: 1.5;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    font-family: Arial, Helvetica, sans-serif;
-    display: block;
-    margin-bottom: 8px;
-    color: #2c3e50;
-    font-weight: 600;
-}
-
-input[type="email"] {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 50px;
-    font-size: 16px;
-    box-sizing: border-box;
-    transition: border 0.3s;
-}
-
-button {
-    background-color: #236c9c;
-    color: white;
-    border: none;
-    padding: 14px 20px;
-    width: 100%;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #236c9cde;
-}
-
-.message {
-    text-align: justify;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 4px;
-    display: none;
-}
-
-.error {
-    background-color: #f2dede;
-    color: #a94442;
-    border: 1px solid #ebccd1;
+    position: relative;
 }
 
 .background-container {
@@ -105,9 +24,139 @@ button:hover {
     background-color: #000000;
 }
 
-/* Estilos responsivos para móviles */
+.password-recovery {
+    background-color: rgba(255, 255, 255, 0.459);
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-right: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    animation: recoverySlideIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 24px;
+    margin-bottom: 20px;
+    animation: elementFadeUp 0.6s ease-out 0.3s both;
+}
+
+.description {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    animation: elementFadeUp 0.6s ease-out 0.4s both;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    animation: elementFadeUp 0.6s ease-out 0.5s both;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input[type="email"]:focus {
+    border-color: #236c9c;
+    box-shadow: 0 0 0 3px rgba(35, 108, 156, 0.2);
+    outline: none;
+}
+
+input[type="email"]:hover {
+    border-color: #4ade80;
+}
+
+button {
+    background-color: #236c9c;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    width: 100%;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: elementFadeUp 0.6s ease-out 0.6s both;
+}
+
+button:hover {
+    background-color: #1a5276;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(35, 108, 156, 0.35);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(35, 108, 156, 0.25);
+}
+
+.message {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+.error {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes recoverySlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes elementFadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    body {
+    :host {
         justify-content: center;
         padding-right: 0;
         padding: 20px;
@@ -150,7 +199,7 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-    body {
+    :host {
         padding: 15px;
     }
     

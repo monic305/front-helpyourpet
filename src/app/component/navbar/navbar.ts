@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,12 +13,11 @@ export class Navbar implements OnInit {
   isMenuOpen = false;
   isDarkMode = false;
 
+  constructor(private themeService: ThemeService) {}
+
   ngOnInit() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    if (savedTheme === 'dark') {
-      document.body.classList.add('dark-mode');
-      this.isDarkMode = true;
-    }
+    this.isDarkMode = this.themeService.isDarkMode;
+    this.themeService.darkMode$.subscribe(dark => this.isDarkMode = dark);
   }
 
   toggleMenu(event: Event) {
@@ -26,14 +26,7 @@ export class Navbar implements OnInit {
   }
 
   toggleTheme(event: any) {
-    this.isDarkMode = event.target.checked;
-    if (this.isDarkMode) {
-      document.body.classList.add('dark-mode');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.body.classList.remove('dark-mode');
-      localStorage.setItem('theme', 'light');
-    }
+    this.themeService.toggleDarkMode();
   }
 
   @HostListener('document:click', ['$event'])

@@ -1,5 +1,5 @@
-import { Component, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -32,6 +32,8 @@ export class Register {
 
   placeholderDoc = 'Número de documento';
   patternDoc = '';
+
+  constructor(private router: Router) {}
 
   openTerms(event: Event) {
     event.preventDefault();
@@ -104,9 +106,12 @@ export class Register {
     }
 
     this.isSubmitting = true;
+    // Simulación de registro - cuando conectes backend, reemplaza el setTimeout
+    // con tu llamada HTTP y mantén el router.navigate en el callback de éxito
     setTimeout(() => {
-      alert("Registro simulado completado");
+      alert('✅ ¡Registro completado exitosamente! Serás redirigido al inicio de sesión.');
       this.isSubmitting = false;
+      this.router.navigate(['/login']);
     }, 2000);
   }
 }
