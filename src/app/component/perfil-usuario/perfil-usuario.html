@@ -334,7 +334,7 @@
 </div>
 
 <!-- ===== MODAL EDITAR MASCOTA ===== -->
-<div class="modal-overlay" *ngIf="showEditPetModal && editingPet" (click)="closeEditPetModal()">
+<div class="modal-overlay" *ngIf="showEditPetModal" (click)="closeEditPetModal()">
   <div class="modal-dialog" (click)="$event.stopPropagation()">
     <div class="modal-header">
       <h5><i class="fas fa-edit"></i> Editar Mascota</h5>
@@ -342,31 +342,34 @@
     </div>
     <div class="modal-body">
       <div class="modal-form-grid">
-        <div class="form-group"><label>Nombre *</label><input type="text" [(ngModel)]="editingPet.nombre"></div>
+        <div class="form-group"><label>Nombre *</label><input type="text" name="nombre" [(ngModel)]="editingPet.nombre" placeholder="Ej: Max, Luna"></div>
         <div class="form-group"><label>Especie *</label>
-          <select [(ngModel)]="editingPet.especie">
+          <select name="especie" [(ngModel)]="editingPet.especie">
+            <option value="" disabled>Selecciona</option>
             <option value="Perro">Perro</option><option value="Gato">Gato</option>
             <option value="Ave">Ave</option><option value="Otro">Otro</option>
           </select>
         </div>
-        <div class="form-group"><label>Raza</label><input type="text" [(ngModel)]="editingPet.raza"></div>
+        <div class="form-group"><label>Raza</label><input type="text" name="raza" [(ngModel)]="editingPet.raza" placeholder="Ej: Labrador"></div>
         <div class="form-group"><label>Edad</label>
           <div class="input-row">
-            <input type="number" [(ngModel)]="editingPet.edad" min="0" max="50">
-            <select [(ngModel)]="editingPet.unidadEdad"><option value="años">Años</option><option value="meses">Meses</option></select>
+            <input type="number" name="edad" [(ngModel)]="editingPet.edad" min="0" max="50" placeholder="0">
+            <select name="unidadEdad" [(ngModel)]="editingPet.unidadEdad"><option value="años">Años</option><option value="meses">Meses</option></select>
           </div>
         </div>
         <div class="form-group"><label>Género</label>
-          <select [(ngModel)]="editingPet.genero"><option value="M">Macho</option><option value="F">Hembra</option></select>
+          <select name="genero" [(ngModel)]="editingPet.genero">
+            <option value="" disabled>Selecciona</option>
+            <option value="M">Macho</option><option value="F">Hembra</option>
+          </select>
         </div>
         <div class="form-group"><label>Tamaño</label>
-          <select [(ngModel)]="editingPet.tamano">
+          <select name="tamano" [(ngModel)]="editingPet.tamano">
+            <option value="" disabled>Selecciona</option>
             <option value="pequeño">Pequeño</option><option value="mediano">Mediano</option><option value="grande">Grande</option>
           </select>
         </div>
-        <div class="form-group full-width"><label>Descripción</label>
-          <textarea [(ngModel)]="editingPet.descripcion" rows="3"></textarea>
-        </div>
+        <div class="form-group full-width"><label>Descripción</label><textarea name="descripcion" [(ngModel)]="editingPet.descripcion" rows="3" placeholder="Características, comportamiento..."></textarea></div>
       </div>
     </div>
     <div class="modal-footer">

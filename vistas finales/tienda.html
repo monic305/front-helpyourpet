@@ -21,9 +21,9 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fredoka:wght@300..700&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" href="assets/CSS/Estilos-Tienda.css">
-	<link rel="stylesheet" href="assets/CSS/Estilos-Tienda-Store.css">
-	<link rel="icon" href="assets/IMG/logo.png" type="image/png">
+	<link rel="stylesheet" th:href="@{/assets/CSS/Estilos-Tienda.css}">
+	<link rel="stylesheet" th:href="@{/assets/CSS/Estilos-Tienda-Store.css}">
+	<link rel="icon" th:href="@{/assets/IMG/logo.png}" type="image/png">
 
 </head>
 
@@ -35,9 +35,9 @@
 			<!-- Logo y nombre -->
 			<div class="brand-section">
 				<div class="logo">
-					<img src="assets/IMG/logo.png" alt="logo" class="logo">
+					<img th:src="@{/assets/IMG/logo.png}" alt="logo" class="logo">
 				</div>
-				<a href="inicio.html" style="text-decoration: none; "><span
+				<a th:href="@{/usuarios/inicio}" style="text-decoration: none; "><span
 						class="brand-name">HelpYourPet</span></a>
 			</div>
 
@@ -47,7 +47,7 @@
 				<div class="botones-finales">
 					<div class="nav-buttons">
 						<button class="nav-buttone">
-							<a href="adopcion.html" style="text-decoration: none;"> <i class="fas fa-dog"></i>
+							<a th:href="@{/adopciones}" style="text-decoration: none;"> <i class="fas fa-dog"></i>
 								<span>Adopciones</span></a>
 						</button>
 
@@ -124,7 +124,7 @@
 					</button>
 					<div class="menu-content">
 						<div class="menu-item">
-							<a href="perfilusuario.html" style="text-decoration: none;">
+							<a th:href="@{/usuarios/perfilusuario}" style="text-decoration: none;">
 								<i class="fas fa-user-plus"></i>
 								<span>Perfil</span>
 							</a>
@@ -142,12 +142,12 @@
 							</a>
 						</div>-->
 						<div class="menu-item">
-							<a href="sobrenosotros.html" style="text-decoration: none;"> <i
+							<a th:href="@{/usuarios/sobrenosotros}" style="text-decoration: none;"> <i
 									class="fas fa-users"></i>
 								<span>Acerca de Nosotros</span></a>
 						</div>
 						<div class="menu-item">
-							<a href="index.html" style="text-decoration: none;"> <i
+							<a th:href="@{/usuarios/index}" style="text-decoration: none;"> <i
 									class="fas fa-arrow-right"></i>
 								<span>Cerrar Sesión</span></a>
 						</div>
@@ -186,7 +186,7 @@
 					<h1 class="hero-title">¡Bienvenidos a Nuestra PetShop!</h1>
 					<p class="hero-subtitle">Tu mascota merece lo mejor, nosotros te lo ofrecemos</p>
 				</div>
-				<img src="assets/IMG/carrusel1 (2).jpg" alt="Perro feliz" class="img-hero">
+				<img th:src="@{/assets/IMG/carrusel1 (2).jpg}" alt="Perro feliz" class="img-hero">
 				<div class="hero-overlay"></div>
 			</div>
 			<div class="carousel-slide">
@@ -194,7 +194,7 @@
 					<h1 class="hero-title">Productos de Calidad </h1>
 					<p class="hero-subtitle">Encuentra todo lo que tu mascota necesita</p>
 				</div>
-				<img src="assets/IMG/carrusel2.jpg" alt="Gato jugando" class="img-hero">
+				<img th:src="@{/assets/IMG/carrusel2.jpg}" alt="Gato jugando" class="img-hero">
 				<div class="hero-overlay"></div>
 			</div>
 			<div class="carousel-slide">
@@ -202,7 +202,7 @@
 					<h1 class="hero-title">Ofertas Especiales </h1>
 					<p class="hero-subtitle">Descuentos exclusivos cada semana</p>
 				</div>
-				<img src="assets/IMG/carrusel3.jpg" alt="Mascotas felices" class="img-hero">
+				<img th:src="@{/assets/IMG/carrusel3.jpg}" alt="Mascotas felices" class="img-hero">
 				<div class="hero-overlay"></div>
 			</div>
 		</div>
@@ -340,7 +340,7 @@
 		<div class="footer-container">
 			<div class="footer-top">
 				<div class="footer-logo">
-					<img src="assets/IMG/logofotter.png" alt="logo" style="height: 90px;">
+					<img th:src="@{/assets/IMG/logofotter.png}" alt="logo" style="height: 90px;">
 					<div class="footer-brand" style="font-family: 'fira sans'; font-size: 1.8rem; margin-top: 10px;">
 						HelpYourPet</div>
 				</div>
@@ -378,6 +378,6 @@
 </body>
 
 
-<script src="assets/JS/JS-Tienda.js"></script>
+<script th:src="@{/assets/JS/JS-Tienda.js}"></script>
 
 </html>

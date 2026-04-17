@@ -97,7 +97,18 @@ export class PerfilUsuario implements OnInit {
   // Modal state
   showAddPetModal = false;
   showEditPetModal = false;
-  editingPet: Mascota | null = null;
+  editingPet: Mascota = {
+    id: 0,
+    nombre: '',
+    especie: '',
+    raza: '',
+    edad: 0,
+    unidadEdad: 'años',
+    genero: 'M',
+    tamano: '',
+    descripcion: '',
+    foto: ''
+  };
 
   // New pet form
   newPet: Partial<Mascota> = {
@@ -176,14 +187,14 @@ export class PerfilUsuario implements OnInit {
 
   closeEditPetModal(): void {
     this.showEditPetModal = false;
-    this.editingPet = null;
+    this.editingPet = {};
   }
 
   guardarEdicionMascota(): void {
-    if (!this.editingPet) return;
-    const idx = this.mascotas.findIndex(m => m.id === this.editingPet!.id);
-    if (idx >= 0) {
-      this.mascotas[idx] = { ...this.editingPet };
+    if (!this.editingPet.id) return;
+    const idx = this.mascotas.findIndex(m => m.id === this.editingPet.id!);
+    if (idx >= 0 && this.editingPet) {
+      this.mascotas[idx] = { ...this.editingPet } as Mascota;
     }
     this.closeEditPetModal();
   }
